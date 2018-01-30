@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML5 Tetris!</title>
+<style type="text/css">
+    div#matrix {
+        position: absolute;
+        width: 300px;
+        height: 600px;
+        outline-style: solid;
+        background: linear-gradient(to bottom, #F5F5F5, #E5E5E5);
+    }
+    div#pause {
+        position: absolute;
+        width: 300px;
+        height: 600px;
+        outline-style: solid;
+        visibility: hidden;
+        text-align: center;
+    }
+    div#game_over {
+        position: absolute;
+        width: 300px;
+        height: 600px;
+        outline-style: solid;
+        visibility: hidden;
+        text-align: center;
+    }
+    div#score {
+        position: relative;
+        left: 320px;
+        width: 150px;
+        height: 100px;
+    }
+    div#nextpiece {
+        position: relative;
+        left: 320px;
+        top: 30px;
+        width: 100px;
+        height: 100px;
+    }
+    div#manual {
+        position: relative;
+        left: 320px;
+        top: 180px;
+        width: 100px;
+        height: 100px;
+        color: gray;
+    }
+    div#tetris_wrapper {
+        width: 470px;
+        height: 600px;
+        margin: 0 auto;
+        vertical-align: middle;
+    }
+</style>
+</head>
+<body onload="init();">
+<div id="tetris_wrapper">
+
+<div id="matrix">
+</div>
+<div id="pause">
+<br></br>
+<b>PAUSE</b><br></br>
+Press Enter to continue
+</div>
+<div id="game_over">
+<br></br>
+<b>GAME OVER</b><br></br>
+Press Enter to restart
+</div>
+<div id="score">
+Level: <b><span id="level"></span></b><br></br>
+Score: <b><span id="points"></span></b><br></br>
+Lines: <b><span id="lines"></span></b><br></br>
+Next:
+</div>
+<div id="nextpiece">
+</div>
+<div id="manual">
+&larr;/&rarr;: move<br></br>
+&darr;: accelerate<br></br>
+&uarr;/x: rotate &#x21BB;<br></br>
+z: rotate &#x21BA;<br></br>
+space: drop<br></br>
+enter: pause
+</div>
+</div>
+
+<script type="text/javascript" src="jquery-2.1.4.js"></script>
+<script type="text/javascript" src="utils.js"></script>
+
+<script type="text/javascript" src="tetris-styles.js"></script>
+<script type="text/javascript" src="tetris.js"></script>
+
+<script type="text/javascript">
+function init() {
+	tetrisInit();
+}
+</script>
+</body>
+</html>
